@@ -1,21 +1,21 @@
 $(document).ready(function() {
 	console.log("sup");
 	var History = window.History;
-	
+
 	if(!History.enabled){
 		return false;
 	}
 
-	History.Adapter.bind(window,'statechange',function(){ 
+	History.Adapter.bind(window,'statechange',function(){
     	var State = History.getState();
 
     	History.log(State.data, State.title, State.url);
     	//alert(State.url);
-					
+
     	$("#main-content").load(State.url + " #main-content");
-    	
+
     	console.log("hello");
-    	
+
     	//$('.tooths').bind("click" ,eatIt);
 	});
 
@@ -74,10 +74,11 @@ function  changeBox(){
 			//buttonsGo();
 			//History.pushState({state:$(this).attr('data-state'),content:$('#main-content').html()}, null, url);
 
-			$(".tooths").unbind("click" ,eatIt);				
+			$(".tooths").unbind("click" ,eatIt);
 			$("#main-content").slideUp('slow', function(){
 					chew();
 					changeBox();
+                    $('#main-content').empty();
 					History.pushState(null, null, url);
 					//$("#main-content").load(url);
 				});
