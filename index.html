@@ -14,10 +14,11 @@
   </head>
   <body>
 
-  <div class="container col-md-12">
-  <header id="header" class="col-md-12">
+  <div class="container">
+  <div class="content-back"></div>
+  <header id="header" class="row">
   </header>
-      <nav>
+      <nav class="row">
   	<ul>
 		<li><a href="about.html" title="" class="tooths">Work</a></li>
 		<li><a href="tester.html" title="" class="tooths">about</a></li>
@@ -25,23 +26,40 @@
 		<li><a href="tester.html" title="" class="tooths">not sure</a></li>
 		<li><a href="about.html" title="" class="tooths">resume</a></li>
 		<li><a href="#box" title="" class="tooths">links</a></li>
-
   	</ul>
   </nav><!-- /header -->
-  <div id="main-content">
-   <section class=" col-md-4">first project</section>  <!-- GRID SYSTEM?? expand pages or reveal them under the elements? -->
-   <section class=" col-md-4">second project</section>
-   <section class=" col-md-4">third project</section>
+  
+	  <div id="main-content" class="row">
+	  <h1>Works</h1>
 
-   <section class=" col-md-4">fourth project</section>
-   <section class=" col-md-4">fifth project</section>
-   <section class=" col-md-4">sixth project</section>
+	  	<a href="#first-project" class="work-link"><img src="img/smile.jpg" class="col-md-4" /></a>
+	  	<section id="first-project" class="col-md-12">first project
+	  	<p>text and stuff</p>
+	  	</section>
 
-  <div id="box"></div>
-  </div>
+	  	<a href="#second-project" class="work-link"><img src="img/smile.jpg" class="col-md-4" /></a>
+	  	<section id="second-project" class="col-md-12">second project
+	  	<p>general BS</p>
+	  	</section>
+	  	
+		<a href="#third-project" class="work-link"><img src="img/smile.jpg" class="col-md-4" /></a>
 
-  <footer>
-  	<ul>
+		<section id="third-project" class=" col-md-12">third project
+		<p>more BS</p>
+		</section>
+	  	
+	  	
+	  	
+	  	
+
+	     <!-- GRID SYSTEM?? expand pages or reveal them under the elements? -->
+	   
+	   
+	  </div>
+
+
+  <footer class="row">
+  	<ul class="row">
   		<li><a href="about.html" title="" class="tooths">link 1</a></li>
   		<li><a href="tester.html" title="" class="tooths">link 2</a></li>
   		<li><a href="about.html" title="" class="tooths">link 3</a></li>
@@ -50,7 +68,8 @@
       <li><a href="about.html" title="" class="tooths">link 5</a></li>
   	</ul>
   </footer>
-  <div class="neck"><div>
+
+	
   	<!--<img src="img/jackson-heights.jpg" class="img-responsive" />-->
   </div>
 
@@ -67,6 +86,7 @@
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/work.js"></script>
 
   </body>
 </html>
