@@ -13,6 +13,9 @@ body{
 	height:100%;
 	//overflow:hidden;
 }
+h1{
+	padding-left:20px;
+}
 p{
 	margin:0;
 }
@@ -58,6 +61,10 @@ nav{
 	position:relative;
 	//overflow:hidden;
 }
+.wrapper{
+	padding-left:10px;
+	padding-right:10px;
+}
 .content-back{
 	background:#000;
 	width:100%;
@@ -66,25 +73,33 @@ nav{
 	z-index:-10;
 }
 #main-content{
-	
-	
 	background:#422e69;
 	color:#fff;
 }
 .hidden{
-	display:none;
+	display:hidden;
+}
+.work-link{
+	width:100%;
+	img{
+		width:100%;
+	}
+}
+section{
+	height:auto;
+	width:100%;
+	border-bottom:1px #ffff00 solid;
+	//background:#ff0000;
 }
 
-section{
-	height:300px;
-	border-bottom:1px #ffff00 solid;
+.section-content{
 	display:none;
-	background:#ff0000;
+
 }
 
 footer{
 		//opacity:0.5;
-	//display:table;	
+	//display:table;
 	position: relative;
 	background:#ccc;
 	height:150px;
@@ -110,7 +125,6 @@ footer{
 
 article{
 	position: relative;
-	width:100%;
 	height:200px;
 	background:#ff0000;
 }

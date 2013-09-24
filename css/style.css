@@ -13,18 +13,23 @@ body {
 }
 
 /* line 16, ../sass/style.scss */
+h1 {
+  padding-left: 20px;
+}
+
+/* line 19, ../sass/style.scss */
 p {
   margin: 0;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 header {
   background: #ccc;
   height: 150px;
   position: relative;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 nav ul {
   display: table;
   table-layout: fixed;
@@ -33,18 +38,18 @@ nav ul {
   padding: 0;
   margin: 0;
 }
-/* line 38, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 nav li {
   text-align: center;
   background: #000;
   border-right: 4px #000 solid;
   display: table-cell;
 }
-/* line 43, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 nav li:last-child {
   border: none;
 }
-/* line 48, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 nav a {
   background: #ccc;
   width: 100%;
@@ -52,13 +57,19 @@ nav a {
   display: block;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .container {
   height: 100%;
   position: relative;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
+.wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 68, ../sass/style.scss */
 .content-back {
   background: #000;
   width: 100%;
@@ -67,26 +78,39 @@ nav a {
   z-index: -10;
 }
 
-/* line 68, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #main-content {
   background: #422e69;
   color: #fff;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .hidden {
-  display: none;
+  display: hidden;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
+.work-link {
+  width: 100%;
+}
+/* line 84, ../sass/style.scss */
+.work-link img {
+  width: 100%;
+}
+
+/* line 88, ../sass/style.scss */
 section {
-  height: 300px;
+  height: auto;
+  width: 100%;
   border-bottom: 1px #ffff00 solid;
-  display: none;
-  background: #ff0000;
 }
 
-/* line 85, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
+.section-content {
+  display: none;
+}
+
+/* line 100, ../sass/style.scss */
 footer {
   position: relative;
   background: #ccc;
@@ -94,7 +118,7 @@ footer {
   padding: 0;
   margin: 0;
 }
-/* line 93, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 footer ul {
   width: 100%;
   display: table;
@@ -102,31 +126,30 @@ footer ul {
   padding: 0;
   margin: 0;
 }
-/* line 100, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 footer li {
   text-align: center;
   display: table-cell;
 }
-/* line 104, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 footer a {
   display: block;
   width: 100%;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 article {
   position: relative;
-  width: 100%;
   height: 200px;
   background: #ff0000;
 }
 
-/* line 117, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .head {
   min-height: 100%;
 }
 
-/* line 121, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 #box {
   height: auto;
   width: 30px;
@@ -135,7 +158,7 @@ article {
 }
 
 @media (max-width: screen-sm) {
-  /* line 132, ../sass/style.scss */
+  /* line 146, ../sass/style.scss */
   body {
     background: #ff0000;
   }
