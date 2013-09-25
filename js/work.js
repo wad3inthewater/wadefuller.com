@@ -5,7 +5,10 @@ $(document).ready(function(){
 
 		//$(".work-link").children('img').fadeIn();
 		$(lastThumb).children('img').fadeIn();
-		$(lastSection).slideUp();
+		
+		if (lastSection != $(this).attr('href')){
+			$(lastSection).slideUp();
+		}
 		/*if($('.section-content').css('display') == 'none'){
 			alert("fade that");
 		}*/
@@ -16,7 +19,7 @@ $(document).ready(function(){
 		lastSection = currentSection;
 		//alert(section);
 		//$(currentThumb).children('img').fadeOut();
-		$(currentSection).slideDown();
+		$(currentSection).slideToggle();
 
 
 		//currentThumb.next("img")slideUp();
