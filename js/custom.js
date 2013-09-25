@@ -70,7 +70,6 @@ function  changeBox(){
 			$('.tooths').fadeIn();
 			var tooth = $(this);
 			var url = $(this).attr("href");
-			$(tooth).fadeOut();
 			//buttonsGo();
 			//History.pushState({state:$(this).attr('data-state'),content:$('#main-content').html()}, null, url);
 
