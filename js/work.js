@@ -1,7 +1,11 @@
 $(document).ready(function(){
+	
 	var lastThumb;
 	var lastSection;
-	$(".work-link").click(function(e){
+
+	$("#loader").delegate('.work-link', 'click', function(e) {
+		
+	
 
 		//$(".work-link").children('img').fadeIn();
 		$(lastThumb).children('img').fadeIn();
