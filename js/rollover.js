@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
 	$(".tooths").hover(function() {
-		$(this).addClass('animated flipOutY');
+//$(this).removeClass('animated flipInX flipOutX');
+		//$(this).addClass('animated flipInX');
 	}, function() {
-		$(this).removeClass('flipOutY');
+        //$(this).addClass('animated flipOutX');
+        //$(this).removeClass('animated flipInX');
+
 		/* Stuff to do when the mouse leaves the element */
 	});
 
