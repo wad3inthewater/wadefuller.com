@@ -40,7 +40,9 @@ $(document).ready(function() {
     },function(){
     		//$(document).ready(function(){
     			$("#loader").slideDown('slow', function(){
-      				$('.tooths').bind("click" ,eatIt);
+      				  $('header').addClass("fadeIn");
+                      $('header').removeClass("fadeOut");
+                      $('.tooths').bind("click" ,eatIt);
       				changeBox();
 
       			});
@@ -67,7 +69,8 @@ function  changeBox(){
    function eatIt(){
 		//$("nav a").click(function(e){
 			//	.preventDefault();
-			$('.tooths').fadeIn();
+            $('header').addClass("animated fadeOut");
+			//$('.tooths').fadeIn();
 			var tooth = $(this);
 			var url = $(this).attr("href");
 			//buttonsGo();
@@ -78,7 +81,6 @@ function  changeBox(){
 					chew();
 					changeBox();
                     //$('#main-content').empty();
-                    
 					History.pushState(null, null, url);
 					//$('#loader').empty();
 
