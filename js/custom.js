@@ -12,7 +12,7 @@ $(document).ready(function() {
     	History.log(State.data, State.title, State.url);
     	//alert(State.url);
 
-    	$("#main-content").load(State.url + " #main-content");
+    	$("#loader").load(State.url + " #main-content");
 
     	console.log("hello");
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
     	top: "-=50"
     },function(){
     		//$(document).ready(function(){
-    			$("#main-content").slideDown('slow', function(){
+    			$("#loader").slideDown('slow', function(){
       				$('.tooths').bind("click" ,eatIt);
       				changeBox();
 
@@ -74,11 +74,14 @@ function  changeBox(){
 			//History.pushState({state:$(this).attr('data-state'),content:$('#main-content').html()}, null, url);
 
 			$(".tooths").unbind("click" ,eatIt);
-			$("#main-content").slideUp('slow', function(){
+			$("#loader").slideUp('slow', function(){
 					chew();
 					changeBox();
-                    $('#main-content').empty();
+                    //$('#main-content').empty();
+                    
 					History.pushState(null, null, url);
+					//$('#loader').empty();
+
 					//$("#main-content").load(url);
 				});
 			//return false;
