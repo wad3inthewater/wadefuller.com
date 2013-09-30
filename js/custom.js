@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	console.log("sup");
-	var History = window.History;
 
+	var History = window.History;
 	if(!History.enabled){
 		return false;
 	}
@@ -10,77 +10,45 @@ $(document).ready(function() {
     	var State = History.getState();
 
     	History.log(State.data, State.title, State.url);
-    	//alert(State.url);
-
     	$("#loader").load(State.url + " #main-content");
-
     	console.log("hello");
-
-    	//$('.tooths').bind("click" ,eatIt);
 	});
 
+	
+
    $('.tooths').click(function(e){
+   		$(".container").animate({
+   			width: "100%",
+   			top: "0"
+   		});
    		e.preventDefault();
-   		//var url= $(this).attr('href');
    });
 
-
    function chew(){
-   	 	$("footer").animate({
+   	 	$(".container").animate({
 		top: "+=100",
+		width: "50%",
 		specialEasing: {
-      		top: "easeOutBounce"
-      	},
-	}).animate({
-      	top: "-=100"
-    }).animate({
-    	top: "+=50"
-    }).animate({
-    	top: "-=50"
-    },function(){
-    		//$(document).ready(function(){
-    			$("#loader").slideDown('slow', function(){
-      				  $('header').addClass("fadeIn");
-                      $('header').removeClass("fadeOut");
-                      $('.tooths').bind("click" ,eatIt);
-      				changeBox();
-
-      			});
-    		//});
+      		height: "easeOutBounce"
+      	}
       });
+	/*function(){
+    		//$(document).ready(function(){
+    	$("#loader").slideDown('slow', function(){
+        	$('.tooths').bind("click" ,eatIt);
+      		});
+      	});*/
    };
 
-function buttonsGo(){
-	if($('.tooths').css('background' , '#000000')){
-		//alert("black");
-	}
-}
-function  changeBox(){
-
- 	 	if ($('#box').css('background-color') === 'rgb(0, 0, 0)') {
- 	 		//alert("black")
-			$('#box').css('background-color' , 'rgb(225, 0, 0)');
-		}
-		else{
-			$('#box').css('background-color' , 'rgb(0, 0, 0)');
-		}
-}
-
    function eatIt(){
-		//$("nav a").click(function(e){
-			//	.preventDefault();
-            $('header').addClass("animated fadeOut");
 			//$('.tooths').fadeIn();
 			var tooth = $(this);
 			var url = $(this).attr("href");
 			//buttonsGo();
-			//History.pushState({state:$(this).attr('data-state'),content:$('#main-content').html()}, null, url);
-
 			$(".tooths").unbind("click" ,eatIt);
 			$("#loader").slideUp('slow', function(){
 					chew();
 					changeBox();
-                    //$('#main-content').empty();
 					History.pushState(null, null, url);
 					//$('#loader').empty();
 
@@ -90,7 +58,7 @@ function  changeBox(){
 		//});
 	};
 
-	$('.tooths').bind("click" ,eatIt);
+	//$('.tooths').bind("click" ,eatIt);
 
 });
 
