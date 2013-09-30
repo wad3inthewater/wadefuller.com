@@ -1,76 +1,215 @@
-/* line 2, ../sass/style.scss */
+/* line 1, ../sass/_header.scss */
+header {
+  background: black;
+  position: relative;
+}
+
+/* line 9, ../sass/_header.scss */
+nav {
+  position: relative;
+  background: #000;
+}
+/* line 13, ../sass/_header.scss */
+nav ul {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+}
+/* line 24, ../sass/_header.scss */
+nav li {
+  text-align: center;
+  border-right: 4px #000 solid;
+  border-bottom: 4px solid #000;
+  display: table-cell;
+}
+/* line 30, ../sass/_header.scss */
+nav li:last-child {
+  border-right: none;
+}
+/* line 35, ../sass/_header.scss */
+nav a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+}
+
+/* line 44, ../sass/_header.scss */
+.eye {
+  margin: 10px;
+  width: 170px;
+  height: 50px;
+  background: #a8e03b;
+}
+
+/* line 50, ../sass/_header.scss */
+.eye-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 55, ../sass/_header.scss */
+.eye-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 63, ../sass/_header.scss */
+.iris {
+  height: 30px;
+  width: 100px;
+}
+
+/* line 69, ../sass/_header.scss */
+.pupil {
+  height: 10px;
+  width: 10px;
+  background: black;
+}
+
+/* line 74, ../sass/_header.scss */
+.nose-top {
+  width: 170px;
+  height: 100px;
+  background: #000;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-radius: 5px;
+  right: 0;
+  left: 0;
+}
+
+/* line 89, ../sass/_header.scss */
+.nose-bottom {
+  width: 230px;
+  height: 65px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 80px;
+  background: #000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+/* line 2, ../sass/_animations.scss */
+.fadedOn {
+  animation: mymove 1s infinite;
+  -webkit-animation: mymove 5s infinite;
+  /* Safari and Chrome */
+}
+
+@keyframes mymove {
+  /* line 9, ../sass/_animations.scss */
+  from {
+    top: 0px;
+  }
+
+  /* line 10, ../sass/_animations.scss */
+  to {
+    top: 200px;
+  }
+}
+
+@-webkit-keyframes mymove {
+  /* line 15, ../sass/_animations.scss */
+  from {
+    top: 0px;
+  }
+
+  /* line 16, ../sass/_animations.scss */
+  to {
+    top: 200px;
+  }
+}
+
+/* line 1, ../sass/_footer.scss */
+footer {
+  position: relative;
+  background: black;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+}
+/* line 9, ../sass/_footer.scss */
+footer ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  margin: 0;
+}
+/* line 16, ../sass/_footer.scss */
+footer li {
+  text-align: center;
+  display: table-cell;
+}
+/* line 20, ../sass/_footer.scss */
+footer a {
+  display: block;
+  width: 100%;
+}
+
+/* line 8, ../sass/style.scss */
 html {
   height: 100%;
 }
 
-/* line 6, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 body {
   margin: 0;
-  background: url("../img/bg-neck.gif") repeat-y;
   background-position: center;
   background-color: #fff;
   height: 100%;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 h1 {
   margin-top: 0;
   padding-left: 20px;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 p {
   margin: 0;
 }
 
-/* line 23, ../sass/style.scss */
-header {
-  background: #000;
-  height: 150px;
-  position: relative;
-}
-
-/* line 31, ../sass/style.scss */
-nav ul {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  height: 40px;
-  padding: 0;
-  margin: 0;
-}
-/* line 42, ../sass/style.scss */
-nav li {
-  text-align: center;
-  background: #000;
-  border-right: 4px #000 solid;
-  display: table-cell;
-}
-/* line 47, ../sass/style.scss */
-nav li:last-child {
-  border: none;
-}
-/* line 52, ../sass/style.scss */
-nav a {
-  background: #000;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* line 60, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 .container {
-  height: 100%;
+  background: #fff;
   position: relative;
+  border-right: 10px solid black;
+  border-left: 10px solid black;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
+.abs-centered {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 48, ../sass/style.scss */
 .wrapper {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 .content-back {
   background: #fff;
   width: 100%;
@@ -79,92 +218,63 @@ nav a {
   z-index: -10;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 #load {
   width: 100%;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 #main-content {
   background: #422e69;
   color: #fff;
 }
 
-/* line 83, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .hidden {
   display: hidden;
 }
 
-/* line 86, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .work-link {
   width: 100%;
 }
-/* line 88, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .work-link img {
   width: 100%;
 }
 
-/* line 92, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 section {
   height: auto;
   width: 100%;
   border-bottom: 1px #ffff00 solid;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .section-content {
   display: none;
 }
 
-/* line 104, ../sass/style.scss */
-footer {
-  position: relative;
-  background: #000;
-  height: 150px;
-  padding: 0;
-  margin: 0;
-}
-/* line 112, ../sass/style.scss */
-footer ul {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  padding: 0;
-  margin: 0;
-}
-/* line 119, ../sass/style.scss */
-footer li {
-  text-align: center;
-  display: table-cell;
-}
-/* line 123, ../sass/style.scss */
-footer a {
-  display: block;
-  width: 100%;
-}
-
-/* line 130, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 article {
   position: relative;
   height: 200px;
   background: #ff0000;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .head {
   min-height: 100%;
 }
 
-/* line 139, ../sass/style.scss */
-.box {
-  height: auto;
+/* line 97, ../sass/style.scss */
+.chewing-box {
   width: 500px;
-  height: 400px;
+  height: 0px;
   position: relative;
-  background: #000;
 }
 
-/* line 147, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .icn-contact {
   background: url("../img/icon/icn-contact.png") no-repeat;
   background-position: center;
@@ -172,13 +282,13 @@ article {
   height: 30px;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .icn {
   font-size: 0px;
 }
 
 @media (max-width: screen-sm) {
-  /* line 163, ../sass/style.scss */
+  /* line 120, ../sass/style.scss */
   body {
     background: #ff0000;
   }

@@ -1,4 +1,10 @@
 //@import 'bootstrap';
+@import 'colors';
+@import 'header';
+@import 'animations';
+@import 'footer';
+
+
 html{
 	height:100%;
 }
@@ -6,7 +12,7 @@ html{
 body{
 	//height:100%;
 	margin:0;
-	background:url("../img/bg-neck.gif")repeat-y;
+	//background:url("../img/bg-neck.gif")repeat-y;
 	background-position:center;
 
 	background-color:#fff;
@@ -20,47 +26,24 @@ h1{
 p{
 	margin:0;
 }
-header{
-	background:#000;
-	height:150px;
-	position:relative;
-	//opacity:.5;
-}
-nav{
-	//background:#fff;
-	ul{
-		display:table;
-		table-layout: fixed;
-		width:100%;
-		height:40px;
-		padding:0;
-		margin:0;
 
-		//table-layout:fixed;
-	}
 
-	li{
-		text-align:center;
-		background:#000;
-		border-right:4px #000 solid;
-		display:table-cell;
-		&:last-child{
-			border:none;
-		}
-		//padding: 0 10px 0 10px;
-		}
-	a{
-		background:#000;
-		width:100%;
-		height:100%;
-		display:block;
-	}
-}
 
 .container{
-	height:100%;
+	//min-height:100%;
+	background:#fff;
 	position:relative;
+	border-right:10px solid $faceColor;
+	border-left:10px solid $faceColor;
 	//overflow:hidden;
+}
+.abs-centered{
+	margin:auto;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
 }
 .wrapper{
 	padding-left:10px;
@@ -101,31 +84,6 @@ section{
 
 }
 
-footer{
-		//opacity:0.5;
-	//display:table;
-	position: relative;
-	background:#000;
-	height:150px;
-	padding:0;
-	margin:0;
-	ul{
-		width:100%;
-		display:table;
-		table-layout: fixed;
-		padding:0;
-		margin:0;
-	}
-	li{
-		text-align:center;
-		display:table-cell;
-	}
-	a{
-		//background:#ff0000;
-		display:block;
-		width:100%;
-	}
-}
 
 article{
 	position: relative;
@@ -136,12 +94,11 @@ article{
 	min-height:100%;
 }
 
-.box{
-	height:auto;
+.chewing-box{
 	width:500px;
-	height:400px;
+	height:0px;
 	position:relative;
-	background:#000;
+	//background:#AA4444;
 }
 
 .icn-contact{
