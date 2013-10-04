@@ -6,17 +6,17 @@
 
 
 html{
-	height:100%;
+	
 }
 
 body{
 	//height:100%;
 	margin:0;
-	//background:url("../img/bg-neck.gif")repeat-y;
-	background-position:center;
+	//background:url("../img/glass-texture.png")repeat;
+	//background-position:center;
 
 	background-color:#fff;
-	height:100%;
+	
 	//overflow:hidden;
 }
 h1{
@@ -27,14 +27,16 @@ p{
 	margin:0;
 }
 
-
+.nav-link{
+	//width:100%;
+}
 
 .container{
 	//min-height:100%;
-	background:#fff;
+	//background:#ebfcfc;
+	//min-width:500px;
 	position:relative;
-	border-right:10px solid $faceColor;
-	border-left:10px solid $faceColor;
+	margin-top:20px;
 	//overflow:hidden;
 }
 .abs-centered{
@@ -56,27 +58,35 @@ p{
 	position: absolute;
 	z-index:-10;
 }
-#load{
-	width:100%;
+#loader{
+	//display:none;
+	//width:100%;
+
 }
 #main-content{
-	background:#422e69;
-	color:#fff;
+	//background:#422e69;
+	margin-top:60px;
+	color:#000;
 }
 .hidden{
 	display:hidden;
 }
 .work-link{
 	width:100%;
-	img{
-		width:100%;
-	}
+	display:block;
 }
 section{
 	height:auto;
 	width:100%;
-	border-bottom:1px #ffff00 solid;
+	//margin-right:176px;
+	margin-bottom:50px;
+	background:#000;
+
+	//border-bottom:1px #ffff00 solid;
 	//background:#ff0000;
+}
+.work-section{
+	padding:0;
 }
 
 .section-content{
@@ -112,6 +122,9 @@ article{
 .icn{
 	font-size:0px;
 }
+.thumby{
+	cursor: pointer;
+}
 
 $screen-sm:768px;
 
@@ -119,6 +132,9 @@ $screen-sm:768px;
 
 	body{
 		background:#ff0000;
+	}
+	.container{
+		width:100%;
 	}
 
  }
