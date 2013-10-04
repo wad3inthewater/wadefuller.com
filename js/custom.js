@@ -15,50 +15,80 @@ $(document).ready(function() {
 	});
 
 	
-
-   $('.tooths').click(function(e){
+function opener(){
+   
    		$(".container").animate({
-   			width: "100%",
-   			top: "0"
+   			
+   			top: "20px"
+   		}, function(){
+   			
+   			$(this).animate({
+   				width:"100%"
+   			},700, function() {
+   				$(".nav-link").fadeIn();
+   				$('.container').unbind("click" ,opener);
+   			});
    		});
-   		e.preventDefault();
-   });
+   		//preventDefault();
+   
+   }
 
    function chew(){
-   	 	$(".container").animate({
-		top: "+=100",
-		width: "50%",
-		specialEasing: {
-      		height: "easeOutBounce"
-      	}
-      });
-	/*function(){
     		//$(document).ready(function(){
     	$("#loader").slideDown('slow', function(){
-        	$('.tooths').bind("click" ,eatIt);
+        	$('.nav-link').bind("click" ,eatIt);
       		});
-      	});*/
-   };
+     }; 	
+
+
+   $('.nav-link').click(function(e){
+   		
+   		e.preventDefault();
+   });
+   $(".nav-link").hover(
+   	function(){
+   		$(this).removeClass("animated pulse");
+   		$(this).addClass("animated pulse");
+   },function(){
+
+   });
+	   
 
    function eatIt(){
-			//$('.tooths').fadeIn();
-			var tooth = $(this);
+			//$('.nav-link').fadeIn();
+			//alert("hi");
+			var linkCLicked = $(this);
 			var url = $(this).attr("href");
 			//buttonsGo();
-			$(".tooths").unbind("click" ,eatIt);
+			
+			//$("#loader").show();
+			//chew();
+			//$("#loader").addClass("animated shake");	
+
+			$("#loader").fadeOut( "slow", function(){
+				History.pushState(null, null, url);
+
+				$("#loader").fadeIn("slow");
+
+			});
+
+			//$(".nav-link").unbind("click" ,eatIt);
+			/*
 			$("#loader").slideUp('slow', function(){
-					chew();
-					changeBox();
-					History.pushState(null, null, url);
+					//chew();
+					//changeBox();
+					
 					//$('#loader').empty();
 
 					//$("#main-content").load(url);
 				});
+			*/	
 			//return false;
 		//});
 	};
 
-	//$('.tooths').bind("click" ,eatIt);
+	$('.nav-link').bind("click" ,eatIt);
+	//$('.container').bind("click" ,opener);
 
 });
 

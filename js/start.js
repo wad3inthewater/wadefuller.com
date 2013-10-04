@@ -1,4 +1,8 @@
+/*$("#loader").hide();
+$(".nav-link").hide();
+
 $(".container").css({
-		width: '50%',
-		top: '100px'
+		width: '300px',
+		top: '300px'
 	});
+*/	
