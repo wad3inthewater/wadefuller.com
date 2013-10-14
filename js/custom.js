@@ -45,10 +45,12 @@ function opener(){
    		
    		e.preventDefault();
    });
+
+
    $(".nav-link").hover(
    	function(){
-   		$(this).removeClass("animated pulse");
-   		$(this).addClass("animated pulse");
+   		
+
    },function(){
 
    });
@@ -68,7 +70,7 @@ function opener(){
 			$("#loader").fadeOut( "slow", function(){
 				History.pushState(null, null, url);
 
-				$("#loader").fadeIn("slow");
+				$("#loader").delay(500).fadeIn("slow");
 
 			});
 

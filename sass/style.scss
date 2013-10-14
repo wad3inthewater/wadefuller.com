@@ -3,8 +3,11 @@
 @import 'header';
 @import 'animations';
 @import 'footer';
+@import 'content-section';
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400,700);
 
-
+//font-family: 'Quicksand', sans-serif;
+//font-family: 'Open Sans', sans-serif;
 html{
 	
 }
@@ -14,17 +17,30 @@ body{
 	margin:0;
 	//background:url("../img/glass-texture.png")repeat;
 	//background-position:center;
-
 	background-color:#fff;
-	
-	//overflow:hidden;
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	color:#000;
+}
+h1,h2,h3{
+	font-family: 'Quicksand', sans-serif;
+
 }
 h1{
 	margin-top:0;
 	padding-left:20px;
+	color:#000;
+}
+h2{
+	font-size:3.0em;
 }
 p{
 	margin:0;
+}
+a{
+	&:hover{
+		text-decoration: none;
+	}
 }
 
 .nav-link{
@@ -66,25 +82,57 @@ p{
 #main-content{
 	//background:#422e69;
 	margin-top:60px;
-	color:#000;
+	
 }
 .hidden{
 	display:hidden;
 }
+.preview{
+	width:100%;
+
+}
+.section-title{
+	position: absolute;
+	//margin: 0 auto;
+	width:100%;
+	text-align: center;
+	top:10px;
+	//font-weight:bold;
+	//opacity:0;
+}
+.title-fade{
+	opacity: 0;
+}
 .work-link{
 	width:100%;
+	height:auto;
 	display:block;
+	
+	img{
+		border:1px solid #000;
+		opacity: 1;
+	   /*
+	   transition: opacity .25s ease-in-out;
+	   -moz-transition: opacity .25s ease-in-out;
+	   -webkit-transition: opacity .25s ease-in-out;
+	   */
+	}
+
+	&:hover{
+	}
+
 }
 section{
 	height:auto;
 	width:100%;
 	//margin-right:176px;
 	margin-bottom:50px;
-	background:#000;
+	//background:#000;
 
 	//border-bottom:1px #ffff00 solid;
 	//background:#ff0000;
 }
+
 .work-section{
 	padding:0;
 }
@@ -94,12 +142,6 @@ section{
 
 }
 
-
-article{
-	position: relative;
-	height:200px;
-	background:#ff0000;
-}
 .head{
 	min-height:100%;
 }
