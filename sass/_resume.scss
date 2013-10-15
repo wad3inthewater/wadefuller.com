@@ -1,0 +1,27 @@
+.resume-style{
+	//margin-left:20px;
+	h2{
+		font-size:2em;
+		color:#73d6ff;
+	}
+	h3{
+		color:#3d7384;
+
+	}
+	ul{
+		list-style:circle;
+		margin-bottom:20px;
+	}
+	li{
+		color:#73d6ff;
+		margin-bottom:5px;
+		span{
+			color:#000;
+		}
+	}
+	p{
+		color: #5c3183;	
+		font-style:italic;
+		margin-bottom:10px;
+	}
+}

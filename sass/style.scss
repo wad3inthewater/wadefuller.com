@@ -4,6 +4,7 @@
 @import 'animations';
 @import 'footer';
 @import 'content-section';
+@import 'resume';
 @import url(http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400,700);
 
 //font-family: 'Quicksand', sans-serif;
@@ -28,11 +29,18 @@ h1,h2,h3{
 }
 h1{
 	margin-top:0;
-	padding-left:20px;
+	margin-bottom:20px;
 	color:#000;
 }
 h2{
 	font-size:3.0em;
+	@media(max-width:979px){
+		font-size:2.0em;
+	}
+	@media(max-width:767px){
+		font-size:1.2em;
+
+	}	
 }
 p{
 	margin:0;
@@ -77,11 +85,19 @@ a{
 #loader{
 	//display:none;
 	//width:100%;
+	@media(max-width:767px){
+		margin-left:10px;
+		margin-right:10px;
+	}
 
 }
 #main-content{
 	//background:#422e69;
 	margin-top:60px;
+	@media(max-width:767px){
+		margin-top:0;
+	}	
+	
 	
 }
 .hidden{
@@ -99,6 +115,9 @@ a{
 	top:10px;
 	//font-weight:bold;
 	//opacity:0;
+	@media(max-width:767px){
+		top:-10px;
+	}
 }
 .title-fade{
 	opacity: 0;
@@ -131,6 +150,9 @@ section{
 
 	//border-bottom:1px #ffff00 solid;
 	//background:#ff0000;
+	@media(max-width:767px){
+		margin-bottom:10px;
+	}
 }
 
 .work-section{
@@ -139,6 +161,7 @@ section{
 
 .section-content{
 	display:none;
+	//margin-left:20px;
 
 }
 
@@ -166,6 +189,12 @@ section{
 }
 .thumby{
 	cursor: pointer;
+}
+.linkedin{
+	margin-top:20px;
+}
+.about-pic{
+	//max-width:600px;
 }
 
 $screen-sm:768px;

@@ -11,27 +11,10 @@ $(document).ready(function() {
 
     	History.log(State.data, State.title, State.url);
     	$("#loader").load(State.url + " #main-content");
-    	console.log("hello");
+    	console.log("hello");   	
 	});
 
 	
-function opener(){
-   
-   		$(".container").animate({
-   			
-   			top: "20px"
-   		}, function(){
-   			
-   			$(this).animate({
-   				width:"100%"
-   			},700, function() {
-   				$(".nav-link").fadeIn();
-   				$('.container').unbind("click" ,opener);
-   			});
-   		});
-   		//preventDefault();
-   
-   }
 
    function chew(){
     		//$(document).ready(function(){
@@ -45,17 +28,7 @@ function opener(){
    		
    		e.preventDefault();
    });
-
-
-   $(".nav-link").hover(
-   	function(){
-   		
-
-   },function(){
-
-   });
 	   
-
    function eatIt(){
 			//$('.nav-link').fadeIn();
 			//alert("hi");
@@ -71,26 +44,13 @@ function opener(){
 				History.pushState(null, null, url);
 
 				$("#loader").delay(500).fadeIn("slow");
-
 			});
 
-			//$(".nav-link").unbind("click" ,eatIt);
-			/*
-			$("#loader").slideUp('slow', function(){
-					//chew();
-					//changeBox();
-					
-					//$('#loader').empty();
-
-					//$("#main-content").load(url);
-				});
-			*/	
-			//return false;
-		//});
 	};
 
 	$('.nav-link').bind("click" ,eatIt);
-	//$('.container').bind("click" ,opener);
+	
+
 
 });
 
