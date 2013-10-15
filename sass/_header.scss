@@ -1,6 +1,6 @@
 header{
 
-	background:$faceColor;
+	//background:$faceColor;
 	//height:150px;
 	position:relative;
 	//opacity:0.5;
@@ -10,7 +10,7 @@ header{
 nav{
 	position: relative;
 	//top:140px;
-	background:#000;
+	
 	ul{
 		display:table;
 		table-layout: fixed;
@@ -20,13 +20,16 @@ nav{
 		margin:0;
 		//top:100px;
 		//table-layout:fixed;
+		@media(max-width:767px){
+			height:100px;
+		}
 	}
 
 	li{
 		text-align:center;
 		//background:#000;
-		border-right:4px #000 solid;
-		border-bottom:4px solid #000;
+		//border-right:4px #000 solid;
+		//border-bottom:4px solid #000;
 		display:table-cell;
 		&:last-child{
 			border-right:none;
@@ -44,13 +47,92 @@ nav{
 		font-size:0px	;
 	}
 }
-.about-btn{
-	height:120px;
-	width:102px;
-	background:url("../img/about.png") no-repeat;
-
+.nav-link{
+	height:121px;
+	width:121px;
+	@media(max-width:767px){
+		width:71px;
+		height:71px;
+	}
 
 }
+.nav-rollover{
+	-webkit-transition: background 0.3s linear;
+	-moz-transition: background 0.3s linear;
+	-o-transition: background 0.3s linear;
+	transition: background 0.3s linear;	
+}
+.about-btn{
+	background:url("../img/nav-about.png") no-repeat;
+	background-size:100% 100%;
+	&:hover{
+		background:url("../img/nav-about-hover.png") no-repeat;
+		background-size:100% 100%;
+	}
+	@media(max-width:767px){
+		background:url("../img/nav-about-hover.png") no-repeat;
+		background-size:100% 100%;
+
+	}	
+}	
+.work-btn{
+	background:url("../img/nav-work.png") no-repeat;
+	background-size:100% 100%;
+
+	&:hover{
+		background:url("../img/nav-work-hover.png") no-repeat;
+		background-size:100% 100%;
+	}
+	@media(max-width:767px){
+		background:url("../img/nav-work-hover.png") no-repeat;
+		background-size:100% 100%;
+	}		
+}		
+.resume-btn{
+	background:url("../img/nav-resume.png") no-repeat;
+	background-size:100% 100%;
+
+	&:hover{
+		background:url("../img/nav-resume-hover.png") no-repeat;
+		background-size:100% 100%;
+	}
+	@media(max-width:767px){
+		background:url("../img/nav-resume-hover.png") no-repeat;
+		background-size:100% 100%;
+
+	}		
+}
+.contact-btn{
+	background:url("../img/nav-contact.png") no-repeat;
+	background-size:100% 100%;
+
+	&:hover{
+		background:url("../img/nav-contact-hover.png") no-repeat;
+		background-size:100% 100%;
+	}
+	@media(max-width:767px){
+		background:url("../img/nav-contact-hover.png") no-repeat;
+		background-size:100% 100%;
+	}		
+}
+
+.contact-btn-selected{
+	background:url("../img/nav-contact-hover.png") no-repeat;
+}
+.about-btn-selected{
+	background:url("../img/nav-about-hover.png") no-repeat;
+}
+.resume-btn-selected{
+	background:url("../img/nav-resume-hover.png") no-repeat;
+}
+.work-btn-selected{
+	background:url("../img/nav-work-hover.png") no-repeat;
+}
+/*
+
+*/
+
+
 /*.eye{
 	margin:10px;
 	width:170px;

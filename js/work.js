@@ -46,11 +46,15 @@ $(document).ready(function(){
 		});
 
 		currentSection = currentThumb.attr('href');
+
+				
+		$(currentSection).slideDown( function(){
+			
+		});
+
 		lastImg = this_img;
 		lastThumb = currentThumb;
 		lastSection = currentSection;
-				
-		$(currentSection).slideDown();
 
 		e.preventDefault();
 
@@ -105,27 +109,27 @@ $(document).ready(function(){
 
 	};		
 
-
-//hover function for thumbnails that deals with opacity for a tag and h2 title
-	$(".preivew").hover(function() {
-		var currentPreview = $(this);
-		$(currentPreview).children('.title-fade').stop(1,1).animate({
-			opacity: "1"
-			});
-		$(currentPreview).children('.thumb-fade').stop(1,1).animate({
-			opacity: "0.1"
-			});
-
-
-	}, function() {
-		var currentPreview = $(this);
-		$(currentPreview).children('.title-fade').animate({
-			opacity: "0"
-			});		
-		$(currentPreview).children('.thumb-fade').animate({
-			opacity: "1"
-			});		
+	//hover function for thumbnails that deals with opacity for a tag and h2 title
+	$('#loader').delegate('.preview', 'mouseenter', function( event ) {
+		//alert("AHHHH");
+	    		var currentPreview = $(this);
+			$(currentPreview).children('.title-fade').stop(1,1).animate({
+				opacity: "1"
+				});
+			$(currentPreview).children('.thumb-fade').stop(1,1).animate({
+				opacity: "0.1"
+				});
+	}).on('mouseleave', '.preview', function( event ) {
+	    		var currentPreview = $(this);
+			$(currentPreview).children('.title-fade').animate({
+				opacity: "0"
+				});		
+			$(currentPreview).children('.thumb-fade').animate({
+				opacity: "1"
+				});
 	});
+
+
 	
 
 });
