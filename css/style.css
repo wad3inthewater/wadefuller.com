@@ -45,6 +45,8 @@ nav a {
 
 /* line 50, ../sass/_header.scss */
 .nav-link {
+  outline: none;
+  border: none;
   height: 121px;
   width: 121px;
 }
@@ -56,7 +58,7 @@ nav a {
   }
 }
 
-/* line 59, ../sass/_header.scss */
+/* line 61, ../sass/_header.scss */
 .nav-rollover {
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
@@ -64,94 +66,114 @@ nav a {
   transition: background 0.3s linear;
 }
 
-/* line 65, ../sass/_header.scss */
+/* line 67, ../sass/_header.scss */
+.preload-1 {
+  background: url("../img/nav-about-hover.png") no-repeat -9999px -9999px;
+}
+
+/* line 68, ../sass/_header.scss */
+.preload-2 {
+  background: url("../img/nav-work-hover.png") no-repeat -9999px -9999px;
+}
+
+/* line 69, ../sass/_header.scss */
+.preload-3 {
+  background: url("../img/nav-resume-hover.png") no-repeat -9999px -9999px;
+}
+
+/* line 70, ../sass/_header.scss */
+.preload-4 {
+  background: url("../img/nav-resume-hover.png") no-repeat -9999px -9999px;
+}
+
+/* line 72, ../sass/_header.scss */
 .about-btn {
   background: url("../img/nav-about.png") no-repeat;
   background-size: 100% 100%;
 }
-/* line 68, ../sass/_header.scss */
+/* line 75, ../sass/_header.scss */
 .about-btn:hover {
   background: url("../img/nav-about-hover.png") no-repeat;
   background-size: 100% 100%;
 }
 @media (max-width: 767px) {
-  /* line 65, ../sass/_header.scss */
+  /* line 72, ../sass/_header.scss */
   .about-btn {
     background: url("../img/nav-about-hover.png") no-repeat;
     background-size: 100% 100%;
   }
 }
 
-/* line 78, ../sass/_header.scss */
+/* line 85, ../sass/_header.scss */
 .work-btn {
   background: url("../img/nav-work.png") no-repeat;
   background-size: 100% 100%;
 }
-/* line 82, ../sass/_header.scss */
+/* line 89, ../sass/_header.scss */
 .work-btn:hover {
   background: url("../img/nav-work-hover.png") no-repeat;
   background-size: 100% 100%;
 }
 @media (max-width: 767px) {
-  /* line 78, ../sass/_header.scss */
+  /* line 85, ../sass/_header.scss */
   .work-btn {
     background: url("../img/nav-work-hover.png") no-repeat;
     background-size: 100% 100%;
   }
 }
 
-/* line 91, ../sass/_header.scss */
+/* line 98, ../sass/_header.scss */
 .resume-btn {
   background: url("../img/nav-resume.png") no-repeat;
   background-size: 100% 100%;
 }
-/* line 95, ../sass/_header.scss */
+/* line 102, ../sass/_header.scss */
 .resume-btn:hover {
   background: url("../img/nav-resume-hover.png") no-repeat;
   background-size: 100% 100%;
 }
 @media (max-width: 767px) {
-  /* line 91, ../sass/_header.scss */
+  /* line 98, ../sass/_header.scss */
   .resume-btn {
     background: url("../img/nav-resume-hover.png") no-repeat;
     background-size: 100% 100%;
   }
 }
 
-/* line 105, ../sass/_header.scss */
+/* line 112, ../sass/_header.scss */
 .contact-btn {
   background: url("../img/nav-contact.png") no-repeat;
   background-size: 100% 100%;
 }
-/* line 109, ../sass/_header.scss */
+/* line 116, ../sass/_header.scss */
 .contact-btn:hover {
   background: url("../img/nav-contact-hover.png") no-repeat;
   background-size: 100% 100%;
 }
 @media (max-width: 767px) {
-  /* line 105, ../sass/_header.scss */
+  /* line 112, ../sass/_header.scss */
   .contact-btn {
     background: url("../img/nav-contact-hover.png") no-repeat;
     background-size: 100% 100%;
   }
 }
 
-/* line 119, ../sass/_header.scss */
+/* line 126, ../sass/_header.scss */
 .contact-btn-selected {
   background: url("../img/nav-contact-hover.png") no-repeat;
 }
 
-/* line 122, ../sass/_header.scss */
+/* line 129, ../sass/_header.scss */
 .about-btn-selected {
   background: url("../img/nav-about-hover.png") no-repeat;
 }
 
-/* line 125, ../sass/_header.scss */
+/* line 132, ../sass/_header.scss */
 .resume-btn-selected {
   background: url("../img/nav-resume-hover.png") no-repeat;
 }
 
-/* line 128, ../sass/_header.scss */
+/* line 135, ../sass/_header.scss */
 .work-btn-selected {
   background: url("../img/nav-work-hover.png") no-repeat;
 }
@@ -278,7 +300,12 @@ footer a {
   width: 100%;
 }
 
-/* line 1, ../sass/_content-section.scss */
+/* line 2, ../sass/_content-section.scss */
+.section-content img {
+  margin-top: 20px;
+}
+
+/* line 6, ../sass/_content-section.scss */
 .close-btn {
   float: right;
   cursor: pointer;
@@ -287,12 +314,12 @@ footer a {
   max-width: 34px;
 }
 
-/* line 8, ../sass/_content-section.scss */
+/* line 13, ../sass/_content-section.scss */
 .project-description {
   margin-bottom: 20px;
 }
 
-/* line 12, ../sass/_content-section.scss */
+/* line 17, ../sass/_content-section.scss */
 .about-img {
   display: inline-block;
 }
