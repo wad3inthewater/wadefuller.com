@@ -48,6 +48,8 @@ nav{
 	}
 }
 .nav-link{
+	outline:none;
+	border:none;
 	height:121px;
 	width:121px;
 	@media(max-width:767px){
@@ -62,6 +64,11 @@ nav{
 	-o-transition: background 0.3s linear;
 	transition: background 0.3s linear;	
 }
+.preload-1{background:url("../img/nav-about-hover.png") no-repeat -9999px -9999px;}
+.preload-2{background:url("../img/nav-work-hover.png") no-repeat -9999px -9999px;}
+.preload-3{background:url("../img/nav-resume-hover.png") no-repeat -9999px -9999px;}
+.preload-4{background:url("../img/nav-resume-hover.png") no-repeat -9999px -9999px;}
+
 .about-btn{
 	background:url("../img/nav-about.png") no-repeat;
 	background-size:100% 100%;
