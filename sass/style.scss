@@ -51,10 +51,18 @@ p{
 	padding-left:0;
 }
 a{
+	border:none;
+	outline:none;
 	&:hover{
 		text-decoration: none;
 	}
+	&:focus{
+		outline:none;
+		border:none;
+	}
 }
+
+
 
 .nav-link{
 	//width:100%;
