@@ -83,7 +83,7 @@ nav a {
 
 /* line 70, ../sass/_header.scss */
 .preload-4 {
-  background: url("../img/nav-resume-hover.png") no-repeat -9999px -9999px;
+  background: url("../img/nav-contact-hover.png") no-repeat -9999px -9999px;
 }
 
 /* line 72, ../sass/_header.scss */
@@ -224,7 +224,7 @@ nav a {
 	right:0;
 	left:0;
 
-		
+
 }
 .nose-bottom{
 	width:230px;
@@ -404,18 +404,28 @@ p {
   padding-left: 0;
 }
 
-/* line 54, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
+a {
+  border: none;
+  outline: none;
+}
+/* line 56, ../sass/style.scss */
 a:hover {
   text-decoration: none;
 }
+/* line 59, ../sass/style.scss */
+a:focus {
+  outline: none;
+  border: none;
+}
 
-/* line 63, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .container {
   position: relative;
   margin-top: 20px;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .abs-centered {
   margin: auto;
   position: absolute;
@@ -425,13 +435,13 @@ a:hover {
   right: 0;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .wrapper {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 83, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .content-back {
   background: #fff;
   width: 100%;
@@ -441,35 +451,35 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 90, ../sass/style.scss */
+  /* line 98, ../sass/style.scss */
   #loader {
     margin-left: 10px;
     margin-right: 10px;
   }
 }
 
-/* line 99, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 #main-content {
   margin-top: 60px;
 }
 @media (max-width: 767px) {
-  /* line 99, ../sass/style.scss */
+  /* line 107, ../sass/style.scss */
   #main-content {
     margin-top: 0;
   }
 }
 
-/* line 108, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .hidden {
   display: hidden;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .preview {
   width: 100%;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .section-title {
   position: absolute;
   width: 100%;
@@ -477,24 +487,24 @@ a:hover {
   top: 10px;
 }
 @media (max-width: 767px) {
-  /* line 115, ../sass/style.scss */
+  /* line 123, ../sass/style.scss */
   .section-title {
     top: -10px;
   }
 }
 
-/* line 127, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 .title-fade {
   opacity: 0;
 }
 
-/* line 130, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .work-link {
   width: 100%;
   height: auto;
   display: block;
 }
-/* line 135, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .work-link img {
   border: 1px solid #000;
   opacity: 1;
@@ -505,42 +515,42 @@ a:hover {
   */
 }
 
-/* line 149, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 section {
   height: auto;
   width: 100%;
   margin-bottom: 50px;
 }
 @media (max-width: 767px) {
-  /* line 149, ../sass/style.scss */
+  /* line 157, ../sass/style.scss */
   section {
     margin-bottom: 10px;
   }
 }
 
-/* line 163, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 .work-section {
   padding: 0;
 }
 
-/* line 167, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 .section-content {
   display: none;
 }
 
-/* line 173, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .head {
   min-height: 100%;
 }
 
-/* line 177, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .chewing-box {
   width: 500px;
   height: 0px;
   position: relative;
 }
 
-/* line 184, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .icn-contact {
   background: url("../img/icon/icn-contact.png") no-repeat;
   background-position: center;
@@ -548,28 +558,28 @@ section {
   height: 30px;
 }
 
-/* line 192, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 .icn {
   font-size: 0px;
 }
 
-/* line 195, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .thumby {
   cursor: pointer;
 }
 
-/* line 198, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .linkedin {
   margin-top: 20px;
 }
 
 @media (max-width: screen-sm) {
-  /* line 209, ../sass/style.scss */
+  /* line 217, ../sass/style.scss */
   body {
     background: #ff0000;
   }
 
-  /* line 212, ../sass/style.scss */
+  /* line 220, ../sass/style.scss */
   .container {
     width: 100%;
   }
