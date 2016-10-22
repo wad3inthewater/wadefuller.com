@@ -4,10 +4,13 @@ import rimraf from 'rimraf';
 import run from 'run-sequence';
 import watch from 'gulp-watch';
 import server from 'gulp-live-server';
+import sass from 'gulp-sass';
 
 const paths = {
-  js          : ['./src/**/*.js'],
-  destination : './app'
+  js          : ['./public/javascripts/**/*.js'],
+  destination : './app',
+  sass        : './public/sass/**/*.scss',
+  css         : './public/stylesheets'
 };
 
 gulp.task('default', callback => {
@@ -15,11 +18,17 @@ gulp.task('default', callback => {
 });
 
 gulp.task('build', callback => {
-  run('clean', 'flow', 'babel', 'restart', callback);
+  run('sass', 'clean', 'flow', 'babel', 'restart', callback);
 });
 
 gulp.task('clean', callback => {
   rimraf(paths.destination, callback);
+});
+
+gulp.task('sass', () => {
+  return gulp.src(paths.sass)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(paths.css));
 });
 
 gulp.task('flow', shell.task([
@@ -27,7 +36,7 @@ gulp.task('flow', shell.task([
 ], {ignoreErrors : true}));
 
 gulp.task('babel', shell.task([
-  'babel src --out-dir app'
+  'babel public/javascripts --out-dir app'
 ]));
 
 let express;
@@ -41,7 +50,9 @@ gulp.task('restart', () => {
 });
 
 gulp.task('watch', () => {
-  return watch(paths.js, () => {
-    gulp.start('build');
-  });
+  gulp.watch(paths.js, ['build']);
+  gulp.watch(paths.sass, ['sass']);
+  // return watch(paths.js, () => {
+  //   gulp.start('build');
+  // });
 });
