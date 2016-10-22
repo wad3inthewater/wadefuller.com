@@ -37,3 +37,5 @@
 .sass-cache/6a4c279e8c6eff743feaa48c142e17ed0021774c/_variables.scssc
 .sass-cache/6a4c279e8c6eff743feaa48c142e17ed0021774c/_wells.scssc
 .sass-cache/6a4c279e8c6eff743feaa48c142e17ed0021774c/bootstrap.scssc
+node_modules/
+app/
