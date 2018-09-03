@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Plavsky;
+  src: url(/fonts/plavsky.otf);
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: #48c7f1;
+  font-family: Plavsky
+}
+
+.gundam-wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 50vw 1fr;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 30vw 1fr;
+}
+
+.header div,
+.footer div {
+  border: 1px solid #48c7f1;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.left-section {}

@@ -8,6 +8,13 @@ import ReactDOM from 'react-dom';
 
 export default function Header() {
   return (
-    <div><h1>something here</h1></div>
+    <header className="header">
+      <div className="left-section">
+      </div>
+      <div><h1>something here</h1>
+        <p>please enter the passcode</p>
+      </div>
+      <div>another thing</div>
+    </header >
   )
 }

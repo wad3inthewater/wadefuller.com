@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header';
+import Gundam from './components/Gundam';
 // import "./main.css"
 // import "purecss";
 // document.body.appendChild(Header());
@@ -9,6 +9,6 @@ const title = 'My Minimal React Webpack Babel Setup';
 
 
 ReactDOM.render(
-  <Header />,
+  <Gundam />,
   document.getElementById('app')
 );
