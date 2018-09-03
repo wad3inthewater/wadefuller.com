@@ -9,12 +9,13 @@ import ReactDOM from 'react-dom';
 export default function Header() {
   return (
     <header className="header">
-      <div className="left-section">
+      <div className="left-panel">
+        80*
       </div>
-      <div><h1>something here</h1>
+      <div className="center-panel"><h1>something here</h1>
         <p>please enter the passcode</p>
       </div>
-      <div>another thing</div>
+      <div className="right-panel">another thing</div>
     </header >
   )
 }

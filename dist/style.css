@@ -3,11 +3,21 @@
   src: url(/fonts/plavsky.otf);
 }
 
+:root {
+  --circle: 600px;
+}
+
 body {
   margin: 0;
   background-color: black;
   color: #48c7f1;
-  font-family: Plavsky
+  font-family: Plavsky;
+  font-size: 16px;
+  /* background-image: url('/images/space-mountains.jpg'); */
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 .gundam-wrapper {
@@ -19,6 +29,20 @@ body {
 header {
   display: grid;
   grid-template-columns: 1fr 50vw 1fr;
+  grid-template-areas: "left-panel center-panel right-panel";
+}
+
+.left-panel {
+  text-align: left;
+}
+
+.center-panel {
+  margin: 30px;
+  text-align: center;
+}
+
+.right-panel {
+  text-align: right;
 }
 
 footer {
@@ -32,7 +56,48 @@ footer {
 }
 
 .main-content {
+  display: flex;
   flex: 1;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 20px;
 }
 
-.left-section {}
+.circle-border-left {
+  border-radius: 0 50vw 50vw 0;
+}
+
+.circle-border-right {
+  border-radius: 50vw 0 0 50vw;
+}
+
+.left-content {
+  width: 25vw;
+  border: 1px solid;
+}
+
+.right-content {
+  width: 25vw;
+  border: 1px solid;
+}
+
+.circle-overlay-main {
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50vw - 300px);
+  height: var(--circle);
+  width: var(--circle);
+  /* max-height: 600px;
+  max-width: 600px; */
+  border: 1px solid #48c7f1;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 1386px) {
+  /* .circle-overlay-main {
+    top: calc(50% - 268px);
+    left: calc(50vw - 268px);
+    height: 556px;
+    width: 556px;
+  } */
+}
