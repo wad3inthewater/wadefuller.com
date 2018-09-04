@@ -1,6 +1,6 @@
 @font-face {
   font-family: Plavsky;
-  src: url(/fonts/plavsky.otf);
+  src: url(../fonts/plavsky.otf);
 }
 
 :root {
@@ -30,6 +30,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 50vw 1fr;
   grid-template-areas: "left-panel center-panel right-panel";
+  grid-column-gap: 20px;
 }
 
 .left-panel {
@@ -37,17 +38,11 @@ header {
 }
 
 .center-panel {
-  margin: 30px;
   text-align: center;
 }
 
 .right-panel {
   text-align: right;
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 30vw 1fr;
 }
 
 .header div,
@@ -73,12 +68,12 @@ footer {
 
 .left-content {
   width: 25vw;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .right-content {
   width: 25vw;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .circle-overlay-main {
@@ -91,6 +86,58 @@ footer {
   max-width: 600px; */
   border: 1px solid #48c7f1;
   border-radius: 50%;
+}
+
+footer {
+  position: fixed;
+  top: calc(100vh - 60px);
+  width: 100vw;
+  margin-top: 30px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 30vw 1fr;
+  animation: menuSlideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in
+}
+
+footer.slide-in {
+  animation: menuSlideIn;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+footer.slide-menu {
+  animation-name: menuSlideOut;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+footer .center-panel {
+  margin: 0 30px;
+}
+
+@keyframes menuSlideIn {
+  0% {
+    top: calc(100vh - 60px);
+  }
+
+  100% {
+    top: calc(100vh - 200px);
+  }
+}
+
+@keyframes menuSlideOut {
+  0% {
+    top: calc(100vh - 200px);
+  }
+
+  100% {
+    top: calc(100vh - 60px);
+  }
 }
 
 @media only screen and (min-width: 1386px) {
