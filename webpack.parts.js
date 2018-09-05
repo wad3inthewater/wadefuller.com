@@ -34,7 +34,7 @@ exports.devServer = ({
     stats: "errors-only",
     host, // Defaults to `localhost`
     port, // Defaults to 8080
-    open: true,
+    open: false,
     overlay: true,
   },
 });
@@ -53,6 +53,44 @@ exports.loadCSS = ({
         "style-loader",
         "css-loader"
       ],
+    }, ],
+  },
+});
+// handles loading images
+exports.loadImages = ({
+  include,
+  exclude,
+  options
+} = {}) => ({
+  module: {
+    rules: [{
+      test: /\.(png|jpg|svg)$/,
+      include,
+      exclude,
+      use: {
+        loader: "url-loader",
+        options,
+      },
+    }, ],
+  },
+});
+// Handles loading fonts
+exports.loadFonts = ({
+  include,
+  exclude,
+  options
+} = {}) => ({
+  module: {
+    rules: [{
+      test: /\.otf$/,
+      include,
+      exclude,
+      use: {
+        loader: "url-loader",
+        options: {
+          limit: 50000
+        },
+      },
     }, ],
   },
 });

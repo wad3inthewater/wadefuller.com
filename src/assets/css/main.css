@@ -15,7 +15,7 @@ body {
   color: #48c7f1;
   font-family: Plavsky;
   font-size: 16px;
-  /* background-image: url('/images/space-mountains.jpg'); */
+  background-image: url('../images/mountains.jpg');
 }
 
 h1 {

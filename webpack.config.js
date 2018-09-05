@@ -15,6 +15,12 @@ const commonConfig = merge([{
 const productionConfig = merge([
   parts.extractCSS({
     use: "css-loader"
+  }),
+  parts.loadImages({
+    options: {
+      limit: 15000,
+      name: "[name].[ext]"
+    }
   })
 ]);
 
@@ -24,7 +30,9 @@ const developmentConfig = merge([
     host: process.env.HOST,
     port: process.env.PORT,
   }),
-  parts.loadCSS()
+  parts.loadCSS(),
+  parts.loadImages(),
+  parts.loadFonts()
 ])
 
 module.exports = mode => {
