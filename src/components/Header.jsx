@@ -13,7 +13,7 @@ export default function Header() {
         80*
       </div>
       <div className="center-panel"><h1>something here</h1>
-        <p>please enter the passcode</p>
+        <p>please enter the passcode here things here</p>
       </div>
       <div className="right-panel">another thing</div>
     </header >

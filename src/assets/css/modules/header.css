@@ -1,0 +1,18 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 50vw 1fr;
+  grid-template-areas: "left-panel center-panel right-panel";
+  grid-column-gap: 20px;
+}
+
+.left-panel {
+  text-align: left;
+}
+
+.center-panel {
+  text-align: center;
+}
+
+.right-panel {
+  text-align: right;
+}

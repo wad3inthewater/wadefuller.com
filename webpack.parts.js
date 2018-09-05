@@ -34,6 +34,7 @@ exports.devServer = ({
     stats: "errors-only",
     host, // Defaults to `localhost`
     port, // Defaults to 8080
+    hot: true,
     open: false,
     overlay: true,
   },
@@ -92,5 +93,22 @@ exports.loadFonts = ({
         },
       },
     }, ],
+  },
+});
+//handles loading of javascript
+exports.loadJavaScript = ({
+  include,
+  exclude
+} = {}) => ({
+  module: {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      include,
+      exclude: [/node_modules/, /\.ejs$/],
+      use: ['babel-loader']
+    }],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   },
 });

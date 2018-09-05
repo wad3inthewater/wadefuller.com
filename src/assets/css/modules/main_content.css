@@ -1,0 +1,25 @@
+.main-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 20px;
+}
+
+.circle-border-left {
+  border-radius: 0 50vw 50vw 0;
+}
+
+.circle-border-right {
+  border-radius: 50vw 0 0 50vw;
+}
+
+.left-content {
+  width: 25vw;
+  /* border: 1px solid; */
+}
+
+.right-content {
+  width: 25vw;
+  /* border: 1px solid; */
+}

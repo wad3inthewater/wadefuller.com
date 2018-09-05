@@ -1,17 +1,27 @@
 const merge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const path = require("path");
 
 const parts = require("./webpack.parts");
 
+const PATHS = {
+  app: path.join(__dirname, "src")
+
+}
 const commonConfig = merge([{
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "wade fuller",
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
-}]);
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: "wade fuller",
+        template: 'src/index.html'
+      }),
+      new webpack.HotModuleReplacementPlugin()
+    ]
+  },
+  parts.loadJavaScript({
+    include: PATHS.app
+  })
+]);
 const productionConfig = merge([
   parts.extractCSS({
     use: "css-loader"
@@ -21,7 +31,8 @@ const productionConfig = merge([
       limit: 15000,
       name: "[name].[ext]"
     }
-  })
+  }),
+  parts.loadFonts()
 ]);
 
 const developmentConfig = merge([
