@@ -15,7 +15,10 @@ export default function Header() {
       <div className="center-panel"><h1>something here</h1>
         <p>please enter the passcode here things here</p>
       </div>
-      <div className="right-panel">another thing</div>
+      <div className="right-panel">
+        <p>another thing</p>
+        <div className="right-panel-outline"></div>
+      </div>
     </header >
   )
 }
