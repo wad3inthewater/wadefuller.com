@@ -9,12 +9,14 @@ header {
 .left-panel {
   text-align: left;
   position: relative;
+  z-index: 1;
 }
 
 .center-panel {
   text-align: center;
   position: relative;
   /* box-sizing: border-box; */
+  z-index: 1;
   box-sizing: content-box;
 }
 
@@ -22,6 +24,7 @@ header {
   font-size: 20px;
   text-align: right;
   position: relative;
+  z-index: 1;
 }
 
 .header p,

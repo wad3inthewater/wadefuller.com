@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 // import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -27,6 +28,7 @@ export default class Header extends PureComponent {
     return (
       <header className={headerClasses}>
         <div className="left-panel">
+          <li><Link to="/about">about</Link></li>
           <div className="boarder-highlight"></div>
           <div className="content-wrap">
             80*
@@ -35,7 +37,7 @@ export default class Header extends PureComponent {
         <div className="center-panel">
           <div className="boarder-highlight delay-animation-extended-1"></div>
           <div className="content-wrap">
-            <h1>something here</h1>
+            <h1>Wade Fuller III</h1>
             <p>please enter the passcode here things here</p>
           </div>
         </div>

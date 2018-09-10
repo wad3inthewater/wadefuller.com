@@ -21,14 +21,34 @@
   }
 }
 
+@keyframes collapse {
+  0% {
+    height: 100%
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
 .boarder-highlight {
   top: 0;
   left: 0;
   border: none !important;
   height: 100%;
   width: 100%;
+  z-index: 0;
   /* background-color: #ff0000; */
+  animation-name: collapse;
+  animation-delay: 1.5s;
+  animation-duration: 10ms;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
   position: absolute;
+}
+
+.runanimation .boarder-highlight {
+  animation-play-state: running;
 }
 
 .boarder-highlight::before,

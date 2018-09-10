@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./assets/css/main.css"
-import component from './components/SimpleComponent';
+import { BrowserRouter, browserHistory } from 'react-router-dom';
 import Gundam from './components/Gundam';
 // import "./main.css"
 // import "purecss";
@@ -14,10 +14,11 @@ const title = 'My Minimal React Webpack Babel Setup';
 
 // // HMR interface
 
-ReactDOM.render(
-  <Gundam />,
-  document.getElementById('app')
-);
+ReactDOM.render((
+  <BrowserRouter history={browserHistory}>
+    <Gundam />
+  </BrowserRouter>
+), document.getElementById('app'));
 
 
 // if (module.hot) {

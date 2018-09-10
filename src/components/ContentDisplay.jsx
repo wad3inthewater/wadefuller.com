@@ -1,8 +1,15 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom'
+import AboutSection from './AboutSection'
+import MusicSection from './MusicSection'
 
 export default function ContentDisplay() {
   return (
     <React.Fragment>
+      <Switch>
+        <Route path="/about" component={AboutSection} />
+        <Route path="/music" component={MusicSection} />
+      </Switch>
       <div className="main-content">
         {/* <div className="circle-overlay-main"></div> */}
         <div className="left-content ">
