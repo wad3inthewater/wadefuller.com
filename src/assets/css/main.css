@@ -1,4 +1,5 @@
 @import 'other.css';
+@import 'animations/border_highlight.css';
 @import 'modules/header.css';
 @import 'modules/main_content.css';
 @import 'modules/footer.css';
@@ -23,6 +24,11 @@ body {
 
 h1 {
   font-size: 2rem;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 .gundam-wrapper {
@@ -34,6 +40,13 @@ h1 {
 .header div,
 .footer div {
   border: 1px solid #48c7f1;
+}
+
+.content-wrap {
+  padding: 20px 0;
+  position: relative;
+  background-color: black;
+  border: none !important;
 }
 
 .circle-overlay-main {

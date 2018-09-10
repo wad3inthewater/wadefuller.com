@@ -1,0 +1,80 @@
+@keyframes revealOutline {
+  0% {
+    /* opacity: 1; */
+    width: 50%;
+  }
+
+  50% {
+    width: 0%;
+    height: 100%;
+    /* opacity: 1; */
+  }
+
+  75% {
+    /* opacity: 1; */
+  }
+
+  100% {
+    width: 0;
+    /* opacity: 0; */
+    height: 0;
+  }
+}
+
+.boarder-highlight {
+  top: 0;
+  left: 0;
+  border: none !important;
+  height: 100%;
+  width: 100%;
+  /* background-color: #ff0000; */
+  position: absolute;
+}
+
+.boarder-highlight::before,
+.boarder-highlight::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 50%;
+  outline: 1px solid #000;
+  /* background-color: blueviolet; */
+  z-index: 0;
+  animation-delay: 1s;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-name: revealOutline;
+}
+
+.boarder-highlight::after {
+  left: 0;
+  /* direction: rtl; */
+  /* transform: rotate(90deg); */
+  /* bottom: 0; */
+  /* transform: scaleY(.5); */
+  /* height: 20%; */
+}
+
+.boarder-highlight::before {
+  right: 0;
+  /* direction: rtl; */
+  /* top: 0; */
+}
+
+.runanimation .boarder-highlight::before,
+.runanimation .boarder-highlight::after {
+  animation-play-state: running;
+}
+
+.delay-animation-extended-1.boarder-highlight::before,
+.delay-animation-extended-1.boarder-highlight::after {
+  animation-delay: 1.3s;
+}
+
+.delay-animation-extended-2.boarder-highlight::before,
+.delay-animation-extended-2.boarder-highlight::after {
+  animation-delay: 1.5s;
+}

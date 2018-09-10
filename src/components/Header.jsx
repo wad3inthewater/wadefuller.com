@@ -21,22 +21,31 @@ export default class Header extends PureComponent {
   }
   render() {
     const { mounted } = this.state;
-    const rightPanelclasses = classNames('right-panel', {
+    const headerClasses = classNames('header', {
       'runanimation': mounted
     })
     return (
-      <header className="header">
+      <header className={headerClasses}>
         <div className="left-panel">
-          80*
-      </div>
-        <div className="center-panel"><h1>something here</h1>
-          <p>please enter the passcode here things here</p>
+          <div className="boarder-highlight"></div>
+          <div className="content-wrap">
+            80*
+          </div>
         </div>
-        <div className={rightPanelclasses}>
-          <p>another thing</p>
-          <div className="right-panel-outline"></div>
+        <div className="center-panel">
+          <div className="boarder-highlight delay-animation-extended-1"></div>
+          <div className="content-wrap">
+            <h1>something here</h1>
+            <p>please enter the passcode here things here</p>
+          </div>
         </div>
-      </header >
+        <div className="right-panel">
+          <div className="boarder-highlight delay-animation-extended-2"></div>
+          <div className="content-wrap">
+            <p>another thing</p>
+          </div>
+        </div>
+      </header>
     )
   }
 }
