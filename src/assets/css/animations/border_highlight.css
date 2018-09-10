@@ -11,12 +11,12 @@
   }
 
   75% {
-    /* opacity: 1; */
+    opacity: 1;
   }
 
   100% {
     width: 0;
-    /* opacity: 0; */
+    opacity: 0;
     height: 0;
   }
 }
@@ -87,6 +87,14 @@
 .runanimation .boarder-highlight::before,
 .runanimation .boarder-highlight::after {
   animation-play-state: running;
+}
+
+.delay-animation-extended-1.boarder-highlight {
+  animation-delay: 1.8s;
+}
+
+.delay-animation-extended-2.boarder-highlight {
+  animation-delay: 2s;
 }
 
 .delay-animation-extended-1.boarder-highlight::before,
