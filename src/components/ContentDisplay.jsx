@@ -6,23 +6,17 @@ import MusicSection from './MusicSection'
 export default function ContentDisplay() {
   return (
     <React.Fragment>
-      <Switch>
-        <Route path="/about" component={AboutSection} />
-        <Route path="/music" component={MusicSection} />
-      </Switch>
-      <div className="main-content">
-        {/* <div className="circle-overlay-main"></div> */}
-        <div className="left-content ">
-          <p>lets say this</p>
-          <p>and lets also talk about this</p>
-        </div>
-        <div>
-          <p>stuff goes here</p>
-          <p>more stuff here</p>
-        </div>
-        <div className="right-content"></div>
-      </div>
 
+      <div className="main-content">
+        <Switch>
+          <Route path="/about" component={AboutSection} />
+          <Route path="/music" component={MusicSection} />
+        </Switch>
+        <p className="animation-paragraph">
+          and lets also talk about this. and something or other happens here. and the ever expanding mind continues to master things
+        </p>
+        {/* <iframe src="https://open.spotify.com/embed/user/djswade/playlist/0I3RzhTWmhUPybunNrzKFY" width="300" height="380" frameborder="0" allowtransparency="true"></iframe> */}
+      </div>
     </React.Fragment>
   )
 }

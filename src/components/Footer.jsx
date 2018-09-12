@@ -21,11 +21,19 @@ export default class Footer extends PureComponent {
     })
     return (
       <footer className="footer">
-        <div>side content</div>
         <div className={centerPanelclasses}>
           <div className="boarder-highlight"></div>
+          <div className="content-wrap">
+            <nav>
+              <ul>
+                <li>attributes</li>
+                <li>listen</li>
+                <li>abilities</li>
+                <li>coordinates</li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div></div>
       </footer>
     )
   }

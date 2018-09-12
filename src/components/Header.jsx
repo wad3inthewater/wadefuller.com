@@ -38,7 +38,6 @@ export default class Header extends PureComponent {
           <div className="boarder-highlight delay-animation-extended-1"></div>
           <div className="content-wrap">
             <h1>Wade Fuller III</h1>
-            <p>please enter the passcode here things here</p>
           </div>
         </div>
         <div className="right-panel">

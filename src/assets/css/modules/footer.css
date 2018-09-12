@@ -3,14 +3,19 @@ footer {
   top: calc(100vh - 60px);
   width: 100vw;
   margin-top: 30px;
-  height: 200px;
+  height: 100px;
   display: grid;
-  grid-template-columns: 1fr 30vw 1fr;
-  animation-delay: 1s;
+  /* grid-template-columns: 1fr 30vw 1fr; */
+  animation-delay: 1.5s;
   animation: menuSlideIn;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 footer.slide-in {
@@ -28,7 +33,7 @@ footer.slide-menu {
 }
 
 footer .center-panel {
-  margin: 0 30px;
+  /* margin: 0 30px; */
 }
 
 @keyframes menuSlideIn {
@@ -37,13 +42,13 @@ footer .center-panel {
   }
 
   100% {
-    top: calc(100vh - 200px);
+    top: calc(100vh - 100px);
   }
 }
 
 @keyframes menuSlideOut {
   0% {
-    top: calc(100vh - 200px);
+    top: calc(100vh -100px);
   }
 
   100% {

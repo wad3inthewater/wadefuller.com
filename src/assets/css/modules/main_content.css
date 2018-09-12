@@ -19,6 +19,11 @@
   /* border: 1px solid; */
 }
 
+.animation-paragraph {
+  width: 300px;
+  display: relative;
+}
+
 .right-content {
   width: 25vw;
   /* border: 1px solid; */

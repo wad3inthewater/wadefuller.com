@@ -1,4 +1,5 @@
 @import 'other.css';
+@import 'animations/paragraph_line_reveal.css';
 @import 'animations/border_highlight.css';
 @import 'modules/header.css';
 @import 'modules/main_content.css';
@@ -28,6 +29,7 @@ h1 {
 }
 
 p {
+  line-height: 24px;
   margin-bottom: 0;
 }
 
