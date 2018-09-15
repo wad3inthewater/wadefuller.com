@@ -1,7 +1,7 @@
 header {
   display: grid;
-  grid-template-columns: 1fr 50vw 1fr;
-  grid-template-areas: "left-panel center-panel right-panel";
+  /* grid-template-columns: 1fr 50vw 1fr; */
+  /* grid-template-areas: "left-panel center-panel right-panel"; */
   grid-column-gap: 20px;
   position: relative;
 }

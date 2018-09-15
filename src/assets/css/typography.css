@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Plavsky;
+  src: url('../fonts/plavsky.otf');
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 0;
+}

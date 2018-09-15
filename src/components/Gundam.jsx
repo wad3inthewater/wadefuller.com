@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ContentDisplay from './ContentDisplay';
+import MainContent from './MainContent';
 import { hot } from 'react-hot-loader';
 
 const Gundam = () =>
   <div className="gundam-wrapper">
     <Header></Header>
-    <ContentDisplay></ContentDisplay>
+    <MainContent></MainContent>
     <Footer></Footer>
   </div>
 

@@ -1,0 +1,56 @@
+.no-list-style {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.section-boarder {
+  border: 1px solid var(--blue);
+}
+
+.button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.link-style {
+  color: var(--blue);
+  transition: color 350ms;
+}
+
+.link-style:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.link-style::after {
+  content: '';
+  position: relative;
+  top: 3px;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: var(--blue);
+}
+
+.link-style::before {
+  content: '';
+  position: relative;
+  top: 23px;
+  z-index: 1;
+  height: 1px;
+  width: 0;
+  display: block;
+  transition: width 350ms;
+  background-color: red;
+}
+
+.link-style:hover::before {
+  width: 100%;
+}

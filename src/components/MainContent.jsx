@@ -2,21 +2,22 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import AboutSection from './AboutSection'
 import MusicSection from './MusicSection'
+import SkillsSection from './SkillsSection'
+import SocialSection from './SocialSection'
 
 export default function ContentDisplay() {
   return (
     <React.Fragment>
 
-      <div className="main-content">
+      <main className="main-content">
         <Switch>
           <Route path="/about" component={AboutSection} />
-          <Route path="/music" component={MusicSection} />
+          <Route path="/listen" component={MusicSection} />
+          <Route path="/abilities" component={SkillsSection} />
+          <Route path="/connect" component={SocialSection} />
         </Switch>
-        <p className="animation-paragraph">
-          and lets also talk about this. and something or other happens here. and the ever expanding mind continues to master things
-        </p>
         {/* <iframe src="https://open.spotify.com/embed/user/djswade/playlist/0I3RzhTWmhUPybunNrzKFY" width="300" height="380" frameborder="0" allowtransparency="true"></iframe> */}
-      </div>
+      </main>
     </React.Fragment>
   )
 }

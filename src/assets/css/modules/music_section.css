@@ -1,0 +1,42 @@
+.music-section {
+  width: 100%;
+  display: grid;
+  position: relative;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "section-title section-title"
+    "content playlist"
+}
+
+.music-section h2 {
+  grid-area: section-title;
+}
+
+.playlist-list {
+  display: flex;
+  flex-flow: column;
+}
+
+.playlist-list li {
+  display: inline-block;
+}
+
+/* .playlist-display {
+  grid-area: testspace;
+} */
+@media only screen and (max-width: 768px) {
+  .music-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 150px 1fr;
+    grid-template-areas:
+      "section-title"
+      "content"
+      "playlist"
+  }
+
+  .playlist-display {
+    grid-area: playlist;
+  }
+}
