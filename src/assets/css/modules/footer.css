@@ -39,6 +39,8 @@ footer .center-panel {
   /* margin: 0 30px; */
 }
 
+@media only screen and (max-width: 768px) {}
+
 @keyframes menuSlideIn {
   0% {
     bottom: -100px;

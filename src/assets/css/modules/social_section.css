@@ -1,0 +1,22 @@
+.social-section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.social-section .twitter-icon {
+  height: 120px;
+  width: 120px;
+  background-image: url('../../images/Twitter_Logo_Blue.svg');
+  margin-bottom: 30px;
+}
+
+.social-section .linkedin-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../../images/linkedin-logo.png');
+}

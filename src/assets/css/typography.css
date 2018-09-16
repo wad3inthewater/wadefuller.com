@@ -16,3 +16,8 @@ p {
   line-height: 24px;
   margin-bottom: 0;
 }
+
+a,
+a:visited {
+  color: var(--blue);
+}

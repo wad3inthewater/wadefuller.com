@@ -1,0 +1,36 @@
+.link-style {
+  color: var(--blue);
+  transition: color 350ms;
+}
+
+.link-style:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.link-style::after {
+  content: '';
+  position: relative;
+  top: 3px;
+  z-index: 0;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: var(--blue);
+}
+
+.link-style::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  z-index: 2;
+  height: 2px;
+  width: 0;
+  display: block;
+  transition: width 350ms;
+  background-color: red;
+}
+
+.link-style:hover::before {
+  width: 100%;
+}

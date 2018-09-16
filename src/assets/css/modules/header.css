@@ -27,6 +27,10 @@ header {
   z-index: 1;
 }
 
+.header h1 {
+  margin-bottom: 0;
+}
+
 .header p,
 h1 {
   /* //left: 23px;*/

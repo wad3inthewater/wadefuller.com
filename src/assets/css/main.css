@@ -1,8 +1,10 @@
 @import 'colors.css';
 @import 'typography.css';
 @import 'helpers.css';
+@import 'links.css';
 @import 'animations/paragraph_line_reveal.css';
 @import 'animations/border_highlight.css';
+@import 'modules/social_section.css';
 @import 'modules/music_section.css';
 @import 'modules/header.css';
 @import 'modules/main_content.css';

@@ -1,3 +1,7 @@
+.display-block {
+  display: block;
+}
+
 .no-list-style {
   padding: 0;
   margin: 0;
@@ -17,40 +21,17 @@
   background: transparent;
   font-size: inherit;
   font-family: inherit;
-}
-
-.link-style {
-  color: var(--blue);
-  transition: color 350ms;
-}
-
-.link-style:hover {
   cursor: pointer;
-  color: red;
 }
 
-.link-style::after {
-  content: '';
-  position: relative;
-  top: 3px;
-  height: 1px;
-  width: 100%;
-  display: block;
-  background-color: var(--blue);
+.margin-bottom-1 {
+  margin-bottom: 10px;
 }
 
-.link-style::before {
-  content: '';
-  position: relative;
-  top: 23px;
-  z-index: 1;
-  height: 1px;
-  width: 0;
-  display: block;
-  transition: width 350ms;
-  background-color: red;
+.margin-bottom-2 {
+  margin-bottom: 20px;
 }
 
-.link-style:hover::before {
-  width: 100%;
+.margin-bottom-3 {
+  margin-bottom: 30px;
 }
