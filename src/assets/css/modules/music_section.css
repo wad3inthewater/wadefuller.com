@@ -3,11 +3,16 @@
   display: grid;
   position: relative;
   height: 100%;
+  margin-bottom: 60px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70px 1fr;
   grid-template-areas:
     "section-title section-title"
     "content playlist"
+}
+
+.playlist-links {
+  padding: 0 20px;
 }
 
 .playlist-links .playlist-select {
@@ -22,6 +27,7 @@
 }
 
 .music-section h2 {
+  padding: 0 20px;
   grid-area: section-title;
 }
 

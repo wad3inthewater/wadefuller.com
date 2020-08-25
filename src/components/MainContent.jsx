@@ -1,16 +1,19 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, DefaultRoute } from 'react-router-dom'
 import AboutSection from './AboutSection'
 import MusicSection from './MusicSection'
 import SkillsSection from './SkillsSection'
 import SocialSection from './SocialSection'
+import Homepage from './HomePage'
 
 export default function ContentDisplay() {
   return (
     <React.Fragment>
 
       <main className="main-content">
+        {/* <DefaultRoute component={Homepage} /> */}
         <Switch>
+          <Route exact path="/" component={Homepage} />
           <Route path="/about" component={AboutSection} />
           <Route path="/listen" component={MusicSection} />
           <Route path="/abilities" component={SkillsSection} />

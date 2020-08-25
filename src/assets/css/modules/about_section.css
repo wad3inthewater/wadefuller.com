@@ -1,0 +1,8 @@
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section li {
+  padding-bottom: 10px;
+  list-style-type: circle;
+}

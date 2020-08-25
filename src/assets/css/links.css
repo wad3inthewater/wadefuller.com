@@ -1,5 +1,5 @@
 .link-style {
-  color: var(--blue);
+  color: var(--red);
   transition: color 350ms;
 }
 
@@ -22,7 +22,7 @@
 .link-style::before {
   content: '';
   position: absolute;
-  top: 24px;
+  top: 28px;
   z-index: 2;
   height: 2px;
   width: 0;
@@ -33,4 +33,10 @@
 
 .link-style:hover::before {
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .link-style::before {
+    top: 24px;
+  }
 }

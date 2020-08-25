@@ -1,26 +1,35 @@
+@import 'helpers.css';
 @import 'colors.css';
 @import 'typography.css';
-@import 'helpers.css';
 @import 'links.css';
-@import 'animations/paragraph_line_reveal.css';
-@import 'animations/border_highlight.css';
-@import 'modules/social_section.css';
-@import 'modules/music_section.css';
-@import 'modules/header.css';
-@import 'modules/main_content.css';
-@import 'modules/about_section.css';
-@import 'modules/footer.css';
+@import 'modules/_all.css';
+@import 'animations/_all.css';
+
+html {
+  height: 100%;
+}
+
+#app {
+  height: inherit;
+}
 
 body {
+  height: inherit;
   margin: 0;
   background-color: black;
   color: var(--blue);
-  font-family: Plavsky;
-  font-size: 16px;
+
   /* background-image: url('../images/mountains.jpg'); */
 }
 
+nav ul li a {
+  text-decoration: none;
+}
+
 .gundam-wrapper {
+  height: inherit;
+  display: grid;
+  grid-template-rows: 77px 1fr 60px;
   /* display: flex;
   flex-flow: column; */
   /* min-height: 100vh; */

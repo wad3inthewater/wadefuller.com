@@ -83,7 +83,7 @@ exports.loadFonts = ({
 } = {}) => ({
   module: {
     rules: [{
-      test: /\.otf$/,
+      test: /\.(otf|ttf)$/,
       include,
       exclude,
       use: {

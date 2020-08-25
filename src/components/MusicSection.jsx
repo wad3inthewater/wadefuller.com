@@ -28,7 +28,7 @@ export default class MusicSection extends PureComponent {
           <h2>A playlist is worth 1000 feels</h2>
           <div className="playlist-links">
             {playlists.map(function (playlist, index) {
-              return <button className="playlist-select link-style display-block button-reset margin-bottom-1"
+              return <button className="playlist-select link-style display-block button-reset margin-bottom-1 body-copy"
                 key={index} {...tapOrClick(() => _this.onClick(playlist.url))}>
                 {playlist.name}</button>;
             })}
