@@ -1,0 +1,31 @@
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid red;
+}
+.nav {
+  /* background-color: #fee321; */
+  color: black;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  /* 3d specific styling  */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.foo {
+  height: 350px;
+  width: 200px;
+  display: block;
+  position: absolute;
+  /* background-color: green; */
+  margin-right: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}

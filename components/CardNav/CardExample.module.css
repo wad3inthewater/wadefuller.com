@@ -1,0 +1,104 @@
+/* Container with perspective for 3D effects */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  align-items: center;
+  /* CRITICAL: Set perspective on parent for 3D children */
+  perspective: 1000px;
+}
+
+/* Basic 3D Card */
+.card {
+  width: 200px;
+  height: 280px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* Enable hardware acceleration */
+  will-change: transform;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Flip Card Container */
+.flipCard {
+  width: 200px;
+  height: 280px;
+  position: relative;
+  cursor: pointer;
+  /* CRITICAL: preserve-3d allows children to exist in 3D space */
+  transform-style: preserve-3d;
+}
+
+.cardFace {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardFace h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.cardFace p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Card Fan Layout */
+.cardFan {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  /* CRITICAL: preserve-3d for 3D transforms on children */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.fanCard {
+  width: 120px;
+  height: 180px;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  /* Cards stack on top of each other initially */
+  bottom: 0;
+}
